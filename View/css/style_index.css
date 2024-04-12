@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto Condensed:wght@400;700&display=swap');
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0px;
+    padding: 0px;
+	width: 100%;
+    background-color: #ffffff;
+}
+
+.banner {
+	width: 100%;
+}
+
+.cont_logo {
+    width: 20%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.section_login {
+    width: 420px;
+    background: none;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+	background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding:25px;
+}
+
+.login {
+    text-align: center;
+}
+
+.login .input-box {
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    background: #5eb319;
+    display: block;
+    margin: 30 auto;
+    text-align: center;
+    padding: 10px 50px;
+    width: 250px;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+.input-box input::placeholder {
+    color: #eee;
+}
+
+.login .btn {
+    background: #5eb319;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 10px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    border-width: 1px;
+    border: none;
+    border-radius: 5px;
+	text-align: center;
+}
+
+.btn:hover {
+    background-color: #36680E;
+}
+
+.footer {
+	background: #141414;
+	width: 100%;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+	color: #ffffff;
+	align-items: center;
+	align-content: center;
+	margin-top: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+	.banner {
+        width: 100%;
+        height: auto;
+    }
+	
+	.logo {
+		width: 100%;
+	}
+
+    .section_login {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding:10px;
+    }
+
+    .login {
+        text-align: center;
+    }
+
+	.input-box {
+        width: 50%;
+    }
+
+    .input-box input {
+        width: 50%;
+        margin: 30 auto;
+        text-align: center;
+    }
+
+    .login .btn {
+        width: 50%;
+    }
+}
