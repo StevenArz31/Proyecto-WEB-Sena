@@ -1,0 +1,200 @@
+body { 
+    font-family: Arial, sans-serif; 
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.cont_logo {
+    width: 20%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+form { 
+    width: 100%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+h1 { 
+    text-align: center; 
+}
+
+.imagen-perfil { 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.boton-cambiar-foto { 
+    display: block; 
+    margin: 10px auto; 
+    padding: 10px 20px; 
+    background-color: #5eb319; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.boton-cambiar-foto:hover { 
+    background-color: #36680E; 
+}
+
+.campos-personal { 
+    margin: 20px 0;
+ 
+}
+
+.campos-personal legend { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+}
+
+.campos-personal label { 
+    display: block; 
+    margin-top: 10px; 
+}
+
+.campos-personal input[type="text"] { 
+    width: 70%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.boton-actualizar { 
+    display: block; 
+    margin: 20px auto; 
+    padding: 10px 20px; 
+    background-color: #5eb319; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.boton-actualizar:hover { 
+    background-color: #36680E; 
+}
+
+input{
+    border-radius:5px ;
+}
+
+#section_form {
+    width: 100%;
+    margin: auto;
+	padding-bottom: 100px;
+}
+
+form {
+	width: 600px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset{
+    border-radius:10px ; 
+}
+
+input:hover,
+input[type="password"]:hover,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover{
+    border-color: #5eb319;
+}
+
+input[type="password"],
+input[type="number"],
+input[type="email"]{ 
+    width: 70%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.footer {
+	background: #141414;
+	width: 100%;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+	color: #ffffff;
+	align-items: center;
+	align-content: center;
+
+}
+
+
+@media screen and (max-width: 1024px) {
+	.banner {
+        width: 100%;
+        height: auto;
+    }
+	
+	.logo {
+		width: 100%;
+	}
+
+    #section_form {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    form {
+        text-align: center;
+    }
+
+	input,
+    input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        width: 50%;
+    }
+
+    input:hover,
+    input[type="password"]:hover,
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="number"]:hover{
+        border-color: #5eb319;
+    }
+
+    .input,
+    input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        width: 50%;
+        margin: 30 auto;
+        text-align: center;
+    }
+
+    .boton-cambiar-foto,
+    .boton-actualizar {
+        width: 50%;
+    }
+    .footer{
+        width: 100%;
+    }
+}

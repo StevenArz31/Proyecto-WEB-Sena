@@ -1,5 +1,5 @@
 <?php
-    require "./ConnectionDataBase/ConnectionDataBase.php";
+    include("./ConnectionDataBase/ConnectionDataBase.php");
 ?>
 
 <!DOCTYPE html>
