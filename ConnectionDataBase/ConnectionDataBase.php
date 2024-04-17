@@ -2,9 +2,14 @@
 class ConnectionDataBase
 {
     private $serverName = "127.0.0.1";
-    private $dataBase = "actividad";
+    private $dataBase = "proyectoDB";
     private $userName = "root";
-    private $password = "1631";
+    private $password = "";
+    private $conn;
+
+    function __construct(){
+        $this->conn = $this->CreateConnection();
+    }
 
     // Check connection
     function Connection()
@@ -25,8 +30,14 @@ class ConnectionDataBase
     }
 
     // Close connection
-    function CloseConnection($connection)
+    function CloseConnection()
     {
-        mysqli_close($connection);
+        mysqli_close($this->conn);
+    }
+
+    public function Execute($sql) {
+        $result = $this->conn->query($sql);
+        $this->CloseConnection();
+        return $result;
     }
 }
