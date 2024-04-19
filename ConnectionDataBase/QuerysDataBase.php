@@ -20,4 +20,23 @@ class QuerysDataBase
 
         return $result->num_rows > 0;
     }
+    
+    function recoverPassword($email){
+        $conn = new ConnectionDataBase();
+        
+        if($email==""){
+            return false;
+        }
+        
+        // Consulta SQL para verificar las credenciales
+        $sql = "SELECT contraseña as contrasena FROM usuarios WHERE correo='$email' ";
+        $result = $conn->Execute($sql);
+
+        if ($result->num_rows > 0) {
+            // obtener el resultado
+            $row = $result->fetch_assoc();
+            return $row['contrasena'];
+        }
+        return false;
+    }
 }
