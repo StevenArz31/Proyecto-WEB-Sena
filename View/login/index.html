@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_index.css">
+    <title>Login - Reporte de Fallas En Los Ambientes</title>
+	<link rel="icon" href="image/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="image/favicon.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<img class="banner" src="image/banner.jpg" alt="Banner inicio de sesión">
+	</header>
+    <div class="cont_logo">
+		<img src="image/logo_verde.png" alt="Logo verde sena" class="logo">
+	</div>
+    <section class="section_login">
+        <form class="login" id="loginForm">
+			<h4>Escriba sus datos para ingresar</h4>
+            <div class="input-box">
+                <input type="text" placeholder="Identificación" id="username" name="username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Contraseña" id="password" name="password" required>
+            </div>
+            <input type="submit" class="btn" value="Ingresar"></button>
+            <div>
+                <a href="recuperar.html">Recuperar contraseña</a>
+            </div>
+        </form>
+    </section>
+	<footer class="footer">
+		<p>Sena© <span id="year"></span>. Sistema Desarrollado Por El Grupo TPS38 | Instructor Oscar Gonzalez</p> 
+	</footer>
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function() {
+        
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        document.getElementById("year").textContent = currentYear;
+
+        $('#loginForm').submit(function(event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            // Obtener los datos del formulario
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            // Realizar la solicitud AJAX al servicio web
+            $.ajax({
+                type: 'POST',
+                url: '../../Controller/LoginController.php', // URL del servicio web
+                data: {username: username, password: password},
+                success: function(response) {
+                    // Manejar la respuesta del servicio web
+                    if (response.success) {
+                        window.location.href = 'instructor.html';
+                    } else {
+                        alert(response.message); // Mostrar mensaje de error
+                    }
+                },
+                error: function() {
+                    alert('Error al iniciar sesión'); 
+                }
+            });
+        });
+    });
+</script>
