@@ -12,8 +12,6 @@
 </head>
 <body>
     <?php
-    $libro = new ConnectionDataBase();
-    $libro->Connection();
     ?>
 </body>
 </html>
