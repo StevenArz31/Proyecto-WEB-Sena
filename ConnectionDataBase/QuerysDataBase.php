@@ -15,7 +15,7 @@ class QuerysDataBase
         $input_username = $var["username"];
         $input_password = $var["password"];
         // Consulta SQL para verificar las credenciales
-        $sql = "SELECT * FROM usuarios WHERE num_identificacion='$input_username' AND contraseña='$input_password'";
+        $sql = "SELECT * FROM user WHERE identification_number='$input_username' AND password='$input_password'";
         $result = $conn->Execute($sql);
 
         return $result->num_rows > 0;
