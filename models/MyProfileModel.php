@@ -1,6 +1,6 @@
 <?php
 include("../DTO/MyProfileDTO.php");
-include("../ConnectionDataBase/QuerysDataBase.php");
+include("../config/ConnectionDataBase/QuerysDataBase.php");
 
 class MyProfileModel
 {

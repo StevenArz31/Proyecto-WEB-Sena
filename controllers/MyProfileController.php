@@ -1,5 +1,5 @@
 <?php
-include("../Model/MyProfileModel.php");
+include("../models/MyProfileModel.php");
 class MyProfileController
 {
     private $myProfileDTO;

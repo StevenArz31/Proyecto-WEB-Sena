@@ -1,5 +1,5 @@
 <?php
-require_once("../ConnectionDataBase/ConnectionDataBase.php");
+require_once("ConnectionDataBase.php");
 
 class QuerysDataBase
 {

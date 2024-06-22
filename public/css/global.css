@@ -1,0 +1,23 @@
+:root{
+    --main-bg-color: #4E8E37;
+}
+
+.text-main{
+    color: #4E8E37 !important;}
+
+.bg-sidebar{
+    background-color: var(--main-bg-color);
+}
+
+.bg-btn{
+    background-color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
+}
+
+.logo{
+    max-width: 30% !important;
+}
+
+.logo_menu{
+    max-width: 70% !important;
+}
